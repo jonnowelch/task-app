@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { TaskContext } from "../contexts/TaskContext";
 
-const BookDetails = ({ task }) => {
-  const { removeTask } = useContext(TaskContext);
+const TaskDetails = ({ task }) => {
+  const { dispatch } = useContext(TaskContext);
   return (
-    <li onClick={() => removeTask(task.id)}>
+    <li onClick={() => dispatch({ type: "REMOVE_TASK", id: task.id })}>
       <div className="activity">{task.activity}</div>
       <div className="notes">{task.notes}</div>
     </li>
   );
 };
 
-export default BookDetails;
+export default TaskDetails;

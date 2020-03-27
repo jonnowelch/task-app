@@ -1,25 +1,13 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useReducer } from "react";
+import { taskReducer } from "../reducers/TaskReducer";
 
 export const TaskContext = createContext();
 
 const TaskContextProvider = props => {
-  const [tasks, setTasks] = useState([
-    { activity: "finish this project", notes: "make it look nice", id: 1 },
-    {
-      activity: "start learning react native",
-      notes: "make it ios and android compatible",
-      id: 2
-    }
-  ]);
-  const addTask = (activity, notes) => {
-    setTasks([...tasks, { activity, notes, id: tasks.length + 1 }]);
-  };
-  const removeTask = id => {
-    setTasks(tasks.filter(task => task.id !== id));
-  };
+  const [tasks, dispatch] = useReducer(taskReducer, []);
 
   return (
-    <TaskContext.Provider value={{ tasks, addTask, removeTask }}>
+    <TaskContext.Provider value={{ tasks, dispatch }}>
       {props.children}
     </TaskContext.Provider>
   );
