@@ -1,1 +1,1 @@
-I am making a task app using react context and hooks. I will reularly commit updates to here as i progress
+I am making a task app using react context and hooks. I will regularly commit updates to here as I progress

@@ -1,10 +1,13 @@
 import React from "react";
-import BookContextProvider from "./contexts/TaskContext";
+import Navbar from "./components/Navbar";
+import TaskContextProvider from "./contexts/TaskContext";
 
 function App() {
   return (
     <div className="App">
-      <BookContextProvider></BookContextProvider>
+      <TaskContextProvider>
+        <Navbar />
+      </TaskContextProvider>
     </div>
   );
 }
