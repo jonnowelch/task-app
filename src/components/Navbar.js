@@ -5,8 +5,12 @@ const Navbar = () => {
   const { tasks } = useContext(TaskContext);
   return (
     <div className="navbar">
-      <h1>Ninja Reading List</h1>
-      <p>Currently you have {tasks.length} tasks to get through...</p>
+      <h1>Tasks to do</h1>
+      {tasks.length ? (
+        <p>There are {tasks.length} things to do</p>
+      ) : (
+        <p>Add some tasks to get done</p>
+      )}
     </div>
   );
 };
