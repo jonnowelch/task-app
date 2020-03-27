@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./components/Navbar";
 import TaskContextProvider from "./contexts/TaskContext";
 import TaskList from "./components/TaskList";
+import NewTaskForm from "./components/TaskForm";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <TaskContextProvider>
         <Navbar />
         <TaskList />
+        <NewTaskForm />
       </TaskContextProvider>
     </div>
   );
