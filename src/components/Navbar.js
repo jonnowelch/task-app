@@ -3,11 +3,10 @@ import { TaskContext } from "../contexts/TaskContext";
 
 const Navbar = () => {
   const { tasks } = useContext(TaskContext);
-  console.log(tasks, "1");
   return (
     <div className="navbar">
-      <h1>Tasks to do</h1>
-      <p>There are {console.log(tasks)} to do at the minute...</p>
+      <h1>Ninja Reading List</h1>
+      <p>Currently you have {tasks.length} tasks to get through...</p>
     </div>
   );
 };
