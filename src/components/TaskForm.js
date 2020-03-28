@@ -22,14 +22,14 @@ const NewTaskForm = () => {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Activity to do"
+        placeholder="Type here your task to be done"
         value={activity}
         onChange={e => setActivity(e.target.value)}
         required
       />
       <input
         type="text"
-        placeholder="Notes"
+        placeholder="Notes on task (required)"
         value={notes}
         onChange={e => setNotes(e.target.value)}
         required

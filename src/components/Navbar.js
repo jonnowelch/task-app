@@ -7,7 +7,7 @@ const Navbar = () => {
     <div className="navbar">
       <h1>Tasks to do</h1>
       {tasks.length ? (
-        <p>There are {tasks.length} things to do</p>
+        <p>Items in task list: {tasks.length} </p>
       ) : (
         <p>Add some tasks to get done</p>
       )}

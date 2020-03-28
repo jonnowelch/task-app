@@ -1,3 +1,5 @@
+import uuid from "uuid/v1";
+
 export const taskReducer = (state, action) => {
   switch (action.type) {
     case "ADD_TASK":
@@ -6,7 +8,7 @@ export const taskReducer = (state, action) => {
         {
           activity: action.task.activity,
           notes: action.task.notes,
-          id: action.task.length ? action.task.length + 1 : 1
+          id: uuid()
         }
       ];
     case "REMOVE_TASK":
